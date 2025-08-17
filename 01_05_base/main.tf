@@ -10,14 +10,20 @@ variable "ssh_key_name" {}
 variable "private_key_path" {}
 
 variable "region" {
-  default = "us-east-2"
+  type = string
+  description = "value for AWS region"
+  default = "us-east-1"
 }
 
 variable "vpc_cidr" {
+  type    = string
+  description = "value for VPC CIDR block"
   default = "172.16.0.0/16"
 }
 
 variable "subnet1_cidr" {
+  type    = string
+  description = "value for Subnet CIDR block"
   default = "172.16.0.0/24"
 }
 
